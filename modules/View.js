@@ -64,7 +64,6 @@ export default function View() {
         });
     };
 
-    _intiTempListener();
 
     const bindEditTodos = (handler) => {
         const todoList = getElement(".todo-list");
@@ -156,6 +155,8 @@ export default function View() {
         }
 
     };
+
+    _intiTempListener();
 
 
 
