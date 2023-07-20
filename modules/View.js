@@ -48,7 +48,7 @@ export default function View() {
 
     const toggleTodo = (handler) => {
         const editList = getElement(".todo-list");
-        editList.addEventListener('change', (event) => {
+        editList.addEventListener('click', (event) => {
 
         event.target.type === 'checkbox' && handler (parseInt(event.target.parentElement.id));
 
@@ -59,7 +59,7 @@ export default function View() {
         const todoList = document.querySelector(".todo-list");
         todoList.addEventListener ("input", (event) => {
             if ( event.target.className === "editable") {
-                _tempTodoText = event.target.innertext;
+                _tempTodoText = event.target.innerText;
             }
         });
     };

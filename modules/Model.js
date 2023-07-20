@@ -38,24 +38,23 @@ export default function Model() {
 
     const editTodos = (id, text) => {
         _todos = _todos.map((todo) => {
-            _pushTodos(_todos);
-
             if (todo.id !== id) return todo;
             return { ...todo, text };
 
 
         });
+        _pushTodos(_todos);
+
     };
 
     const toggleTodo = (id) => {
         _todos = _todos.map((todo) => {
             // _onTodoChange(_todos);
-            _pushTodos(_todos);
-
-
             if (todo.id !== id) return todo;
             return { ...todo, completed: !todo.completed };
         });
+        _pushTodos(_todos);
+
     };
 
     const bindTodoChange = (callback) => {
